@@ -42,6 +42,7 @@
             text-align: justify;
             margin-bottom: 20px;
             font-weight: bold;
+            margin-top: 45px;
         }
 
         h6 {
@@ -53,6 +54,7 @@
             letter-spacing: 1px;
             text-align: center;
             margin-bottom: 20px;
+            margin-top: 5px;
         }
 
 
@@ -196,7 +198,7 @@
     <main id="main">
         <section id="search">
             <div class="container">
-                <div class="row">
+                <div class="row" style="margin-left: 60px;">
                     <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                         <h6>MALAYSIAN ASSOCIATION FOR THE BLIND</h6>
                         <h5>The MAB Repository System (MABRep) is a digital repository system of bibliographic information on documents and scholarly work about the Blind and Visually Impaired (BVI). The MABRep covers various subject areas and disciplines. The documents include journal articles, book chapters, reports, and conference papers.</h5>
