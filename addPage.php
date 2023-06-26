@@ -450,7 +450,6 @@ ob_start(); // Start output buffering
 </script>
 
 <body>
-
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
@@ -465,8 +464,6 @@ ob_start(); // Start output buffering
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
         </div>
-
-
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
