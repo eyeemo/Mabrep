@@ -31,7 +31,8 @@
         body {
             background: rgba(34, 197, 13);
             margin-top: 50px;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
+            /* Prevent scrolling */
         }
 
         h5 {
@@ -160,6 +161,24 @@
             width: 200px;
             height: 100%;
         }
+
+        @media (max-width: 768px) {
+            .choose button {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .choose button {
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .choose button {
+                height: 60px;
+            }
+        }
     </style>
 </head>
 <script>
@@ -212,10 +231,10 @@
                 </div>
                 <!-- <p>Visitors: <span id="counter"></span></p> -->
             </div>
-    <br>
+            <br>
             <!-- ======= search Section ======= -->
             <div class="choose">
-                
+
                 <button id="button1" class="btn btn-secondary btn-lg same-size">Search</button>
                 <button id="button2" class="btn btn-secondary btn-lg same-size">Author Name</button>
                 <button id="button3" class="btn btn-secondary btn-lg same-size">Year</button>
