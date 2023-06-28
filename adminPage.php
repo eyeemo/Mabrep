@@ -25,19 +25,12 @@ session_start();
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Icon Bootstrap -->
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+
 </head>
 <style>
-    
-    h5 {
-        font-family: "Jost", sans-serif;
-        font-size: 30px;
-        font-weight: bolder;
-        color: #000;
-        letter-spacing: 2px;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
     /*--------------------------------------------------------------
 # aWord  Section
 --------------------------------------------------------------*/
@@ -72,65 +65,32 @@ session_start();
 
     }
 
-
-
-    .btn.btn-secondary.btn-lg {
-        display: inline-block;
-        /*kiri tinggi,kanan lebar*/
-        background-color: #fff;
-        color: #000;
-        font-weight: bold;
-        border-radius: 10px;
-        margin: 20px;
-        width: 200px;
-        height: 60px;
+    .addBtn {
+        position: relative;
+        background-color: #000;
+        color: #fff;
         border: 2px solid #000;
-        margin-top: 30px;
-    }
-
-    .btn.btn-secondary.btn-lg:hover {
-        background-color: #000;
-        color: #fff;
-        border: 2px solid #fff;
-    }
-
-    .btn.btn-secondary.btn-lg:focus {
-        outline: none;
-        background-color: #888888;
-    }
-
-    .same-size {
-        width: 200px;
-        height: 100%;
-    }
-
-
-    /* .addBtn { */
-    /* position: relative;
-        background-color: #000;
-        color: #fff;
-        border: 2px solid #000; */
-    /* Add margin between buttons */
-    /* font-weight: bolder;
-        font-size: 20px;
+        /* Add margin between buttons */
+        font-weight: bolder;
+        font-size: 26px;
         cursor: pointer;
-        left: 80%;
-        width: 15%; */
-    /* Set desired width */
-    /* height: 70px; */
-    /* Set desired height */
-    /* border-radius: 10px; */
-    /* z-index: 1; */
-    /* Set a lower z-index value */
-    /* Add other necessary styles */
-    /* } */
+        left: 75%;
+        width: 20%;
+        /* Set desired width */
+        height: 60px;
+        /* Set desired height */
+        border-radius: 5px;
+        z-index: 1;
+        /* Set a lower z-index value */
+        /* Add other necessary styles */
+    }
 
 
-    /* .addBtn:hover {
+    .addBtn:hover {
         background-color: #fff;
         color: #000;
         border: 2px solid #000;
-    } */
+    }
 
     .backBtn {
         position: relative;
@@ -197,7 +157,10 @@ session_start();
         color: #fff;
         border: 1px solid #000;
         font-weight: bold;
+        font-size: 20px;
+        width: 15%;
     }
+
 
     #buttonSearch:hover {
         background-color: #fff;
@@ -355,6 +318,45 @@ session_start();
         font-size: 24px;
     }
 
+    h5 {
+        margin: 0 0 10px 0;
+        font-size: 40px;
+        font-weight: 500px;
+        line-height: 56px;
+        color: #fff;
+    }
+
+    
+    .btn.btn-secondary.btn-lg {
+        display: inline-block;
+        /*kiri tinggi,kanan lebar*/
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 20px;
+        width: 200px;
+        height: 60px;
+        border: 2px solid #000;
+        margin-top: 30px;
+    }
+
+    .btn.btn-secondary.btn-lg:hover {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    .btn.btn-secondary.btn-lg:focus {
+        outline: none;
+        background-color: #888888;
+    }
+
+    .same-size {
+        width: 200px;
+        height: 100%;
+    }
+
     @media (max-width: 768px) {
         .backBtn {
             display: none;
@@ -387,6 +389,8 @@ session_start();
         window.location.href = "adminPage.php"; // Replace with the desired URL
     }
 
+
+
     // Confirmation Modal
     function showConfirmationModal(recordId) {
         var modal = document.getElementById('popupConfirm');
@@ -417,10 +421,15 @@ session_start();
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-            <h5 class="logo me-auto">Admin Dashboard</h5>
+            <h1 class="logo me-auto">Admin Dashboard</h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="admin.php">Log Out</a></li>
+                    <li><a class="nav-link scrollto" href="admin.php">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0.2 0 16 16">
+                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                            </svg> Log Out
+                        </a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -437,17 +446,26 @@ session_start();
 
         <section id="list">
 
-            <div class="section-title"><br>
+            <div class="section-title">
                 <div class="container d-flex align-items-center">
                     <?php
                     if (isset($_GET['search']) || !empty($title)) {
-                        echo '<button class="backBtn" onclick="prevPage()">Back</button>';
+                        echo '<button class="backBtn" onclick="prevPage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg> Back
+                        </button>';
                     }
                     ?>
-                    <!-- <button class="addBtn" onclick="window.location.href = 'addPage.php'">+ Add Article</button> -->
+
+
                 </div>
                 <h2>LIST ARTICLE</h2>
-                <button type="button" class="btn btn-secondary btn-lg same-size" onclick="location.href='addPage.php'">+Add Article</button>
+                <button class="btn btn-secondary btn-lg same-size" onclick="window.location.href = 'addPage.php'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cloud-upload-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.5 14.5V11h1v3.5a.5.5 0 0 1-1 0z" />
+                        </svg> Add Article</button>
                 <!-- my-3 m untuk margin, p untuk padding, y untuk both atas bawah  mx-melambangkan both kiri kanan-->
 
             </div>
@@ -461,7 +479,11 @@ session_start();
                                                                                                                                                         echo $_GET['search'];
                                                                                                                                                     }
                                                                                                                                                     ?>" placeholder="Type specific title">
-                        <button class="btn btn-outline-success" id="buttonSearch" type="submit">Search</button>
+                        <button class="btn btn-outline-success" id="buttonSearch" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg> Search
+                        </button>
                     </form>
                 </div>
 
@@ -508,6 +530,11 @@ session_start();
                     $searchColumn = "title";
                     if (empty($title)) {
                         $query = "SELECT * FROM pdf_files ORDER BY id DESC";
+                ?>
+                        <script>
+                            window.location.href = 'adminPage.php';
+                        </script>
+                    <?php
                     } else {
                         $query = "SELECT * FROM pdf_files WHERE $searchColumn = '" . mysqli_real_escape_string($conn, $title) . "'";
                     }
@@ -517,7 +544,7 @@ session_start();
                 $result = mysqli_query($conn, $query);
 
                 if ($result) {
-                ?>
+                    ?>
                     <div class="col-sm-12 p-3">
                         <div class="card-body p-3">
                             <div class="table-responsive">
@@ -548,17 +575,33 @@ session_start();
                                                     <td><?= $row['years']; ?></td>
                                                     <td><?= $row['source']; ?></td>
                                                     <td>
-                                                        <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                        <a href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank" class="btn btn-primary">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                            </svg> View
+                                                        </a>
                                                     </td>
-                                                    <td><a href="editPage.php?id=<?= $row['id']; ?>" class="btn btn-primary">Edit</a></td>
+                                                    <td><a href="editPage.php?id=<?= $row['id']; ?>" id="editBtn" class="btn btn-success">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                            </svg> Edit
+                                                        </a></td>
                                                     <td>
-                                                        <a onclick="showConfirmationModal(<?= $row['id']; ?>)" class="btn btn-danger">Delete</a>
+                                                        <a onclick="showConfirmationModal(<?= $row['id']; ?>)" class="btn btn-danger">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                                            </svg> Delete
+                                                        </a>
                                                     </td>
                                                 </tr>
                                         <?php
                                             }
                                         } else {
-                                            echo "No rows with column values containing 'B' found.";
+                                            echo "Error: There's no article named \"";
+                                            echo $_GET['search'];
+                                            echo "\" in the system. \nPlease create one";
                                         }
                                         ?>
                                     </tbody>

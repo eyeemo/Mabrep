@@ -517,7 +517,7 @@ if (isset($_GET['id'])) {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="title">Title:</label>
-                                        <input type="text" style="font-weight:bold; font-size:18px;" name="title" id="title" class="form-control" value="<?php echo $row['title']; ?>">
+                                        <input type="text" style="font-weight:bold; font-size:18px;" name="title" id="title" class="form-control" autocomplete="off" value="<?php echo $row['title']; ?>">
                                     </div>
 
                                     <div class="form-group">
@@ -598,7 +598,7 @@ if (isset($_GET['id'])) {
 
                                     <div class="form-group">
                                         <label for="author">Author:</label>
-                                        <input type="text" style="font-weight:bold; font-size:18px;" name="author" id="author" class="form-control" value="<?php echo $row['author']; ?>">
+                                        <input type="text" style="font-weight:bold; font-size:18px;" name="author" id="author" class="form-control" autocomplete="off" value="<?php echo $row['author']; ?>">
                                     </div>
 
                                     <div class="form-group">
@@ -613,7 +613,7 @@ if (isset($_GET['id'])) {
 
                                     <div class="form-group">
                                         <label for="source">Source:</label>
-                                        <input type="text" style="font-weight:bold; font-size:18px;" name="source" id="source" class="form-control" value="<?php echo $row['source']; ?>">
+                                        <input type="text" style="font-weight:bold; font-size:18px;" name="source" id="source" class="form-control" autocomplete="off" value="<?php echo $row['source']; ?>">
                                     </div>
                                 </div>
                             </div>

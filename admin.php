@@ -160,9 +160,9 @@ $errorMsg = "Invalid username or password";
                     <img src="assets/img/smallMab.png" alt="MAB Icon">
                 </div>
                 <label for="name">Username</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required autocomplete="off">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required autocomplete="off">
                 <input type="submit" name="login" value="Log In">
 
                 <?php

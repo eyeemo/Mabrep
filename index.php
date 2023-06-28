@@ -35,7 +35,7 @@
             /* Prevent scrolling */
         }
 
-        h5 {
+        h2 {
             font-family: "Arial", sans-serif;
             font-size: 20px;
             color: #333333;
@@ -46,7 +46,7 @@
             margin-top: 45px;
         }
 
-        h6 {
+        h1 {
             font-family: "Arial", sans-serif;
             font-size: 25px;
             font-weight: bold;
@@ -217,12 +217,10 @@
     <main id="main">
         <section id="search">
             <div class="container">
-                <div class="row" style="margin-left: 60px;">
+                <div class="row">
                     <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                        <h6>MALAYSIAN ASSOCIATION FOR THE BLIND</h6>
-                        <h5>The MAB Repository System (MABRep) is a digital repository system of bibliographic information on documents and scholarly work about the Blind and Visually Impaired (BVI). The MABRep covers various subject areas and disciplines. The documents include journal articles, book chapters, reports, and conference papers.</h5>
-                        <div class="d-flex justify-content-center justify-content-lg-start">
-                        </div>
+                        <h1>MALAYSIAN ASSOCIATION FOR THE BLIND</h1>
+                        <h2>The MAB Repository System (MABRep) is a digital repository system of bibliographic information on documents and scholarly work about the Blind and Visually Impaired (BVI). The MABRep covers various subject areas and disciplines. The documents include journal articles, book chapters, reports, and conference papers.</h2>
                     </div>
                     <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
                         <img src="assets/img/smallMab.png" class="img-fluid animated" alt="">

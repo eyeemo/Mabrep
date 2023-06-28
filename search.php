@@ -98,7 +98,7 @@
     }
 
     #buttonSearch {
-        background-color: #22c50d;
+        background-color: #000;
         color: #fff;
         border: 1px solid #000;
         font-weight: bold;
@@ -286,7 +286,7 @@
                                                                                                                                                             $showTable = true;
                                                                                                                                                         } ?>" placeholder="Type to Search">
                             <button onclick="showTable()" class="btn btn-outline-success" id="buttonSearch" type="submit">Search</button>
-                        </form>
+                        </form> 
                     </div>
                 </div>
             </div>

@@ -475,7 +475,7 @@ ob_start(); // Start output buffering
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="title">Title:</label>
-                                <input type="text" style="font-weight:bold; font-size:18px;" name="title" id="title" class="form-control">
+                                <input type="text" style="font-weight:bold; font-size:18px;" name="title" id="title" class="form-control" autocomplete="off">
                             </div>
 
                             <div class="form-group">
@@ -503,7 +503,7 @@ ob_start(); // Start output buffering
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="author">Author:</label>
-                                <input type="text" style="font-weight:bold; font-size:18px;" name="author" id="author" class="form-control">
+                                <input type="text" style="font-weight:bold; font-size:18px;" name="author" id="author" class="form-control" autocomplete="off">
                             </div>
 
                             <div class="form-group">
@@ -518,7 +518,7 @@ ob_start(); // Start output buffering
 
                             <div class="form-group">
                                 <label for="source">Source:</label>
-                                <input type="text" style="font-weight:bold; font-size:18px;" name="source" id="source" class="form-control">
+                                <input type="text" style="font-weight:bold; font-size:18px;" name="source" id="source" class="form-control" autocomplete="off">
                             </div>
                         </div>
                     </div>
