@@ -123,7 +123,7 @@
         <section id="dWord ">
             <div class="section-title">
                 <h2>Author : 'D'</h2>
-                <button class="custom-button" onclick="goToNextPage()"id="backButton">Back</button>
+                <button class="custom-button" onclick="goToNextPage()" id="backButton">Back</button>
             </div>
 
 
@@ -145,63 +145,66 @@
                 <div class="col-sm-12 p-3"><br> <!--table frame-->
                     <div class="mt-4">
                         <div class="card-body">
-                            <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
-                                <thead>
-                                    <tr>
-                                        <th>GROUP</th>
-                                        <th>SUB-GROUP</th>
-                                        <th>TITLE</th>
-                                        <th>AUTHOR</th>
-                                        <th>YEARS</th>
-                                        <th>SOURCE</th>
-                                        <th>ABSTRACT/SUMMARY</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                            <div class="table-responsive">
+
+                                <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
+                                    <thead>
+                                        <tr>
+                                            <th>GROUP</th>
+                                            <th>SUB-GROUP</th>
+                                            <th>TITLE</th>
+                                            <th>AUTHOR</th>
+                                            <th>YEARS</th>
+                                            <th>SOURCE</th>
+                                            <th>ABSTRACT/SUMMARY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        // Check if any rows are returned
+                                        if (mysqli_num_rows($result) > 0) {
+                                            // Display the words
+                                            echo "Words starting with  'D':<br>";
+
+                                            $counter = 1; // Initialize a counter variable
+
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                // Access the column value
+                                                $columnValue = $row['author'];
+                                                // Display the word
+                                                echo $counter . ") Column Value: " . $columnValue;
+                                                $counter++; // Increment the counter 
+                                        ?>
+
+                                                <tr><br>
+                                                    <td><?= $row['groupName']; ?></td>
+                                                    <td><?= $row['subgroup']; ?></td>
+                                                    <td><?= $row['title']; ?></td>
+                                                    <td><?= $row['author']; ?></td>
+                                                    <td><?= $row['years']; ?></td>
+                                                    <td><?= $row['source']; ?></td>
+                                                    <td>
+                                                        <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                    </td>
+                                                </tr>
                                     <?php
-                                    // Check if any rows are returned
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // Display the words
-                                        echo "Words starting with  'D':<br>";
-
-                                        $counter = 1; // Initialize a counter variable
-
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                            // Access the column value
-                                            $columnValue = $row['author'];
-                                            // Display the word
-                                            echo $counter . ") Column Value: " . $columnValue;
-                                            $counter++; // Increment the counter 
-                                    ?>
-
-                                            <tr><br>
-                                                <td><?= $row['groupName']; ?></td>
-                                                <td><?= $row['subgroup']; ?></td>
-                                                <td><?= $row['title']; ?></td>
-                                                <td><?= $row['author']; ?></td>
-                                                <td><?= $row['years']; ?></td>
-                                                <td><?= $row['source']; ?></td>
-                                                <td>
-                                                    <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
-                                                </td>
-                                            </tr>
-                                <?php
+                                            }
+                                        } else {
+                                            // No matching words found
+                                            echo "No rows with column values containing 'D' found.";
                                         }
                                     } else {
-                                        // No matching words found
-                                        echo "No rows with column values containing 'D' found.";
+                                        // Query execution failed
+
+                                        echo "Error: " . mysqli_error($conn);
                                     }
-                                } else {
-                                    // Query execution failed
 
-                                    echo "Error: " . mysqli_error($conn);
-                                }
-
-                                // Close the database connection
-                                mysqli_close($conn);
-                                ?>
-                                </tbody>
-                            </table>
+                                    // Close the database connection
+                                    mysqli_close($conn);
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

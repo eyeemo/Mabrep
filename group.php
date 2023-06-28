@@ -93,7 +93,7 @@
           <li><a class="nav-link scrollto" href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="search.php">Search</a></li>
           <li><a class="nav-link scrollto" href="years.php">Year</a></li>
-          <li><a class="nav-link scrollto" href="group.php">Subject Area</a></li>
+          <li><a class="nav-link scrollto" href="author.php">Author Name</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
