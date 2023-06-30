@@ -107,10 +107,12 @@
                                             while ($row = mysqli_fetch_assoc($result)) {
                                                 // Highlight the word 'Accessibility'
                                                 $subgroup = str_ireplace('Accessibility', '<span class="highlight">Accessibility</span>', $row['subgroup']);
+                                                $groupName = str_ireplace('solutions', '<span class="highlight">solution</span>', $row['groupName']);
+
                                         ?>
 
                                                 <tr><br>
-                                                    <td><?= $row['groupName']; ?></td>
+                                                    <td><?= $groupName; ?></td>
                                                     <td><?= $subgroup; ?></td>
                                                     <td><?= $row['title']; ?></td>
                                                     <td><?= $row['author']; ?></td>

@@ -83,63 +83,65 @@
             // Check if the query was successful
             if ($result) {
             ?>
-            <div class="table-responsive">
-                <div class="col-sm-12 p-3"><br> <!--table frame-->
-                    <div class="mt-4">
-                        <div class="card-body">
-                            <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
-                                <thead>
-                                    <tr>
-                                        <th>GROUP</th>
-                                        <th>SUB-GROUP</th>
-                                        <th>TITLE</th>
-                                        <th>AUTHOR</th>
-                                        <th>YEARS</th>
-                                        <th>SOURCE</th>
-                                        <th>ABSTRACT/SUMMARY</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                <div class="table-responsive">
+                    <div class="col-sm-12 p-3"><br> <!--table frame-->
+                        <div class="mt-4">
+                            <div class="card-body">
+                                <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
+                                    <thead>
+                                        <tr>
+                                            <th>GROUP</th>
+                                            <th>SUB-GROUP</th>
+                                            <th>TITLE</th>
+                                            <th>AUTHOR</th>
+                                            <th>YEARS</th>
+                                            <th>SOURCE</th>
+                                            <th>ABSTRACT/SUMMARY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        // Check if any rows are returned
+                                        if (mysqli_num_rows($result) > 0) {
+
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                // Highlight the word 'Accessibility'
+                                                $subgroup = str_ireplace('Accessibility', '<span class="highlight">Accessibility</span>', $row['subgroup']);
+                                                $groupName = str_ireplace('Challenges', '<span class="highlight">Challenges</span>', $row['groupName']);
+
+                                        ?>
+
+                                                <tr><br>
+                                                    <td><?= $groupName; ?></td>
+                                                    <td><?= $subgroup; ?></td>
+                                                    <td><?= $row['title']; ?></td>
+                                                    <td><?= $row['author']; ?></td>
+                                                    <td><?= $row['years']; ?></td>
+                                                    <td><?= $row['source']; ?></td>
+                                                    <td>
+                                                        <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                    </td>
+                                                </tr>
                                     <?php
-                                    // Check if any rows are returned
-                                    if (mysqli_num_rows($result) > 0) {
-
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                            // Highlight the word 'Accessibility'
-                                            $subgroup = str_ireplace('Accessibility', '<span class="highlight">Accessibility</span>', $row['subgroup']);
-                                    ?>
-
-                                            <tr><br>
-                                                <td><?= $row['groupName']; ?></td>
-                                                <td><?= $subgroup; ?></td>
-                                                <td><?= $row['title']; ?></td>
-                                                <td><?= $row['author']; ?></td>
-                                                <td><?= $row['years']; ?></td>
-                                                <td><?= $row['source']; ?></td>
-                                                <td>
-                                                    <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
-                                                </td>
-                                            </tr>
-                                <?php
+                                            }
+                                        } else {
+                                            // No matching rows found
+                                            echo "No rows with subgroup 'Accessibility' found.";
                                         }
                                     } else {
-                                        // No matching rows found
-                                        echo "No rows with subgroup 'Accessibility' found.";
+                                        // Query execution failed
+                                        echo "Error: " . mysqli_error($conn);
                                     }
-                                } else {
-                                    // Query execution failed
-                                    echo "Error: " . mysqli_error($conn);
-                                }
 
-                                // Close the database connection
-                                mysqli_close($conn);
-                                ?>
-                                </tbody>
-                            </table>
+                                    // Close the database connection
+                                    mysqli_close($conn);
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
 

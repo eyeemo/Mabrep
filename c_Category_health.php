@@ -107,10 +107,12 @@
                                         while ($row = mysqli_fetch_assoc($result)) {
                                             // Highlight the word 'socioeconomy'
                                             $subgroup = str_ireplace('Health, Psychology & Human Development', '<span class="highlight">Health, Psychology & Human Development</span>', $row['subgroup']);
+                                            $groupName = str_ireplace('Challenges', '<span class="highlight">Challenges</span>', $row['groupName']);
+
                                     ?>
 
                                             <tr><br>
-                                                <td><?= $row['groupName']; ?></td>
+                                            <td><?= $groupName; ?></td>
                                                 <td><?= $subgroup; ?></td>
                                                 <td><?= $row['title']; ?></td>
                                                 <td><?= $row['author']; ?></td>
