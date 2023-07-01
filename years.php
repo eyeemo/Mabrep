@@ -198,14 +198,13 @@
                                     <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
                                         <thead>
                                             <tr>
-                                                <th>GROUP</th>
-                                                <th>SUB-GROUP</th>
-                                                <th>TITLE</th>
-                                                <th>AUTHOR</th>
-                                                <th>YEARS</th>
-                                                <th>SOURCE</th>
-                                                <th>ABSTRACT/SUMMARY</th>
-                                            </tr>
+                                            <th class="text-center">GROUP</th>
+                                            <th class="text-center">SUB-GROUP</th>
+                                            <th class="text-center">TITLE</th>
+                                            <th class="text-center">AUTHOR</th>
+                                            <th class="text-center">YEARS</th>
+                                            <th class="text-center">SOURCE</th>
+                                            <th class="text-center">ABSTRACT/SUMMARY</th>
                                         </thead>
                                         <tbody>
                                             <?php
@@ -226,7 +225,10 @@
                                                     <td><?= $row['years']; ?></td>
                                                     <td><?= $row['source']; ?></td>
                                                     <td>
+                                                    <div style="text-align: center;">
+
                                                         <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                    </div>
                                                     </td>
                                                 </tr>
                                     <?php

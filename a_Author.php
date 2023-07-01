@@ -69,7 +69,6 @@
         border: 2px solid #000;
 
     }
-
 </style>
 <script>
     function goToNextPage() {
@@ -122,30 +121,21 @@
                                 <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
                                     <thead>
                                         <tr>
-                                            <th>GROUP</th>
-                                            <th>SUB-GROUP</th>
-                                            <th>TITLE</th>
-                                            <th>AUTHOR</th>
-                                            <th>YEARS</th>
-                                            <th>SOURCE</th>
-                                            <th>ABSTRACT/SUMMARY</th>
+                                            <th class="text-center">GROUP</th>
+                                            <th class="text-center">SUB-GROUP</th>
+                                            <th class="text-center">TITLE</th>
+                                            <th class="text-center">AUTHOR</th>
+                                            <th class="text-center">YEARS</th>
+                                            <th class="text-center">SOURCE</th>
+                                            <th class="text-center">ABSTRACT/SUMMARY</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         // Check if any rows are returned
                                         if (mysqli_num_rows($result) > 0) {
-                                            // Display the words
-                                            echo "Words starting with  'A':<br>";
-
-                                            $counter = 1; // Initialize a counter variable
 
                                             while ($row = mysqli_fetch_assoc($result)) {
-                                                // Access the column value
-                                                $columnValue = $row['author'];
-                                                // Display the word
-                                                echo $counter . ") Column Value: " . $columnValue;
-                                                $counter++; // Increment the counter 
                                         ?>
 
                                                 <tr><br>
@@ -156,7 +146,9 @@
                                                     <td><?= $row['years']; ?></td>
                                                     <td><?= $row['source']; ?></td>
                                                     <td>
-                                                        <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                        <div style="text-align: center;">
+                                                            <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                     <?php

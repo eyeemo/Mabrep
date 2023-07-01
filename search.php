@@ -279,23 +279,3 @@
 </body>
 
 </html>
-<!-- 
-<section id="search">
-            <div class="container" class="jarak" data-aos="fade-up">
-                <div class="section-title"><br>
-                    <h2>Search</h2> -->
-<!-- my-3 m untuk margin, p untuk padding, y untuk both atas bawah  mx-melambangkan both kiri kanan-->
-<!-- <div class="col col-md-8 py-5 justify-content-center">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" id="searchInput" name="search" autocomplete="off" value="<?php $showTable = false;
-                                                                                                                                                        if (isset($_GET['search'])) {
-                                                                                                                                                            echo $_GET['search'];
-                                                                                                                                                            $showTable = true;
-                                                                                                                                                        } ?>" placeholder="Type to Search">
-                            <button onclick="showTable()" class="btn btn-outline-success" id="buttonSearch" type="submit">Search</button>
-                        </form> 
-                    </div>
-                </div>
-            </div>
-
-</script> -->

@@ -119,7 +119,10 @@
                                                 <td><?= $row['years']; ?></td>
                                                 <td><?= $row['source']; ?></td>
                                                 <td>
+                                                <div style="text-align: center;">
+
                                                     <a class="view-btn" href="view_pdf.php?id=<?= $row['id']; ?>" target="_blank">View</a>
+                                                </div>
                                                 </td>
                                             </tr>
                                 <?php
