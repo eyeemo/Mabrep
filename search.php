@@ -26,6 +26,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
 
     <!-- =======================================================
   * Template Name: Arsha
@@ -192,13 +193,13 @@
                             <table class="table" id="myTable" style="display: flex-block;"> <!--table hide p/s ada dekat css-->
                                 <thead>
                                     <tr>
-                                        <th>GROUP</th>
-                                        <th>SUB-GROUP</th>
-                                        <th>TITLE</th>
-                                        <th>AUTHOR</th>
-                                        <th>YEARS</th>
-                                        <th>SOURCE</th>
-                                        <th>ABSTRACT/SUMMARY</th>
+                                        <th class="text-center">GROUP</th>
+                                        <th class="text-center">SUB-GROUP</th>
+                                        <th class="text-center">TITLE</th>
+                                        <th class="text-center">AUTHOR</th>
+                                        <th class="text-center">YEARS</th>
+                                        <th class="text-center">SOURCE</th>
+                                        <th class="text-center">ABSTRACT/SUMMARY</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -226,12 +227,18 @@
                                                 <td><?= $author; ?></td>
                                                 <td><?= $years; ?></td>
                                                 <td><?= $source; ?></td>
-
                                                 <td>
+                                                    <div style="text-align: center;">
                                                     <a class="view-btn" href="view_pdf.php?id=<?= $items['id']; ?>" target="_blank">View</a>
+
+                                                        <!-- <a href="view_pdf.php?id=<?= $items['id']; ?>" target="_blank" class="btn btn-primary">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                            </svg> View
+                                                        </a> -->
+                                                    </div>
                                                 </td>
-
-
                                             </tr>
                                         <?php
                                         }

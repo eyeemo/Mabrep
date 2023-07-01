@@ -115,7 +115,7 @@
             // Check if the query was successful
             if ($result) {
             ?>
-                <div class="col-sm-12 p-3"><br> <!--table frame-->
+                <div class="col-sm-12 p-3"> <!--table frame-->
                     <div class="mt-4">
                         <div class="card-body">
                             <div class="table-responsive">
