@@ -217,7 +217,7 @@
                                                 // 
                                             ?>
 
-                                                <tr><br>
+                                                <tr>
                                                     <td><?= $row['groupName']; ?></td>
                                                     <td><?= $row['subgroup']; ?></td>
                                                     <td><?= $row['title']; ?></td>

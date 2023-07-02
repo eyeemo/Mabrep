@@ -162,17 +162,10 @@
                                     <?php
                                     // Check if any rows are returned
                                     if (mysqli_num_rows($result) > 0) {
-                                        // Display the words
-                                        echo "Words starting with  'F':<br>";
 
-                                        $counter = 1; // Initialize a counter variable
 
                                         while ($row = mysqli_fetch_assoc($result)) {
-                                            // Access the column value
-                                            $columnValue = $row['author'];
-                                            // Display the word
-                                            echo $counter . ") Column Value: " . $columnValue;
-                                            $counter++; // Increment the counter 
+
                                     ?>
 
                                             <tr><br>
