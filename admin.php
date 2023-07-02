@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+// Check if the user is already logged in
+if (isset($_SESSION['name'])) {
+    header("Location: adminPage.php");
+    exit();
+}
 $errorLogin = false;
 $errorMsg = "Invalid username or password";
 ?>
