@@ -97,7 +97,7 @@
   </header>
 
   <main id="main">
-    <section id="group">
+    <section id="subject">
       <div class="section-title">
         <h2>Challenges Category</h2>
 
