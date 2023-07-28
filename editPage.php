@@ -3,7 +3,11 @@ session_start();
 ob_start(); // Start output buffering
 
 include("connection.php");
-
+//checkk if user is not logged in
+if(!isset($_SESSION['name'])) {
+    header("Location: admin.php");
+    exit();
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -687,7 +691,7 @@ if (isset($_GET['id'])) {
                 document.querySelector(".closePopupBtn").addEventListener("click", function() {
                     document.querySelector(".overlay").style.display = "none";
                     document.querySelector(".popup").style.display = "none";
-                  });
+                });
         </script>';
             } else {
                 // Title doesn't exist for a different entry, proceed with updating the database
@@ -702,7 +706,7 @@ if (isset($_GET['id'])) {
 
                 // Set a flag to indicate successful form submission
                 session_start();
-                $_SESSION['form_success'] = true;
+                $_SESSION['edit_success'] = true;
 
                 // Redirect to the next page
                 header("Location: adminPage.php");

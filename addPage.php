@@ -1,6 +1,11 @@
 <?php
 session_start();
 ob_start(); // Start output buffering
+//checkk if user is not logged in
+if(!isset($_SESSION['name'])) {
+    header("Location: admin.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

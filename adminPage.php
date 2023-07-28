@@ -181,6 +181,26 @@ if (!isset($_SESSION['name'])) {
         /* Add other necessary styles */
     }
 
+    .popupEdit {
+        display: none;
+        width: 400px;
+        background: #000;
+        border-radius: 6px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #fff;
+        font-size: 18px;
+
+        position: absolute;
+        z-index: 9999;
+        /* Set a higher z-index value */
+        /* Add other necessary styles */
+    }
+
     .popupConfirm {
         display: none;
         width: 400px;
@@ -208,6 +228,13 @@ if (!isset($_SESSION['name'])) {
         color: #fff;
     }
 
+    .popupEdit h2 {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+        color: #fff;
+    }
+
     .popupConfirm h2 {
         font-size: 38px;
         font-weight: 500;
@@ -216,6 +243,13 @@ if (!isset($_SESSION['name'])) {
     }
 
     .popup img {
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .popupEdit img {
         width: 100px;
         margin-top: -50px;
         border-radius: 50%;
@@ -388,6 +422,25 @@ if (!isset($_SESSION['name'])) {
         <?php unset($_SESSION['form_success']); ?>
     });
 
+    // for display popup EDIT
+    window.addEventListener("DOMContentLoaded", function() {
+    // Check if the form was successfully submitted
+    var formSuccess = <?php echo isset($_SESSION['edit_success']) && $_SESSION['edit_success'] ? 'true' : 'false'; ?>;
+
+    // Show the alert if the form was successfully submitted
+    if (formSuccess) {
+        document.querySelector(".popupEdit").style.display = "block";
+
+        // Hide popup after 3 seconds
+        setTimeout(function() {
+            document.querySelector(".popupEdit").style.display = "none";
+        }, 2000);
+    }
+
+    // Clear the session variable
+    <?php unset($_SESSION['edit_success']); ?>
+    });
+
     // 'Back' button to go back
     function prevPage() {
         window.location.href = "adminPage.php"; // Replace with the desired URL
@@ -444,6 +497,13 @@ if (!isset($_SESSION['name'])) {
         <img src="assets/img/tick.jpeg">
         <h2>Article Succesfully Added</h2>
         <p>The article has succesfully added in the database.</p>
+    </div>
+
+    <!--  Message Edit Successful Popup -->
+    <div class="popupEdit">
+        <img src="assets/img/tick.jpeg">
+        <h2>Article Succesfully Updated</h2>
+        <p>The article has succesfully updated in database.</p>
     </div>
 
     <main id="main">
