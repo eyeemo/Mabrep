@@ -38,7 +38,7 @@
         h2 {
             font-family: "Arial", sans-serif;
             font-size: 20px;
-            color: #333333;
+            color: #000;
             letter-spacing: 2px;
             text-align: justify;
             margin-bottom: 20px;
@@ -50,7 +50,7 @@
             font-family: "Arial", sans-serif;
             font-size: 25px;
             font-weight: bold;
-            color: #333333;
+            color: #000;
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
